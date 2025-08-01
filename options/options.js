@@ -1,0 +1,1 @@
+document.querySelector("#redirect-url").textContent = browser.identity.getRedirectURL();tor("form").addEventListener("submit", saveOptions);
