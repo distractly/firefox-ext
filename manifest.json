@@ -1,0 +1,40 @@
+{
+  "name": "Distractly Firefox Extension",
+  "version": "1",
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "firefox-ext@distractly",
+      "strict_min_version": "53a1"
+    }
+  },
+
+  "icons": {
+    "48": "icons/distractly-48.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/distractly-48.png"
+  },
+
+  "permissions": [
+    "identity",
+    "notifications",
+    "*://www.googleapis.com/*",
+    "*://accounts.google.com/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "background/authorize.js",
+      "background/userinfo.js",
+      "background/main.js"
+    ]
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  }
+
+}
